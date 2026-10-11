@@ -1,9 +1,16 @@
 from fastapi import FastAPI
+from fastapi import HTTPException
+from fastapi import Depends
+
 from contextlib import asynccontextmanager
 
 from sqlalchemy import text
-from app.database import Base , engine
+from sqlalchemy.orm import Session
+
+from app.database import Base , engine, SessionLocal
 from app import models
+from app.models import Person
+
 
 
 @asynccontextmanager
@@ -31,3 +38,40 @@ def health_check ():
         "database" : "connect"
 
            }
+
+@app.post ("/people")
+def create_person (name: str):
+    db = SessionLocal()
+
+    try:
+        person = Person(name=name)
+        db.add(person)
+        db.commit()
+        db.refresh(person)
+
+        return{
+            "id" : person.id,
+            "name" : person.name
+        }
+    finally:
+        db.close()
+
+
+@app.get("/people")
+def get_people():
+    db = SessionLocal()
+
+    try:
+        people = db.query(Person).order_by(Person.id).all()
+
+        return[
+            {
+
+        "id": person.id,
+        "name": person.name
+
+        }
+            for person in people
+            ]
+    finally:
+        db.close()
