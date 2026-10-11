@@ -4,7 +4,7 @@ and base class for the models.
 """
 
 
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase,sessionmaker
 
@@ -13,14 +13,14 @@ class Settings(BaseSettings):
 
     model_config = {"env_file" : ".env"}
 
-    Settings = Settings()
-    engine  = create_engine(Settings.database_url)
+settings = Settings()
+engine  = create_engine(settings.database_url)
 
-    SessionLocal = sessionmaker(
+SessionLocal = sessionmaker(
 
-        bind=engine,
-        autoflush=False
-    )
+    bind=engine,
+    autoflush=False
+)
 
-    class Base(DeclarativeBase):
-        pass
+class Base(DeclarativeBase):
+    pass
