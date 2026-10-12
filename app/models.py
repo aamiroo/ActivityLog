@@ -17,7 +17,7 @@ class Time(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
 
-    Person_id: Mapped[int] = mapped_column(
+    person_id: Mapped[int] = mapped_column(
         ForeignKey("people.id"),
         nullable=False
     )

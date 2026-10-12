@@ -9,9 +9,9 @@ from sqlalchemy.orm import Session
 
 from app.database import Base , engine, SessionLocal
 from app import models
-from app.models import Person
+from app.models import Person , Time
 
-
+from datetime import date , time
 
 @asynccontextmanager
 async def lifespan (app:FastAPI):
@@ -73,5 +73,80 @@ def get_people():
         }
             for person in people
             ]
+    finally:
+        db.close()
+
+
+@app.post("/times")
+def record(
+    person_id: int,
+    entry_date: date,
+    start_time: time,
+    end_time: time,
+           ):
+
+
+    db = SessionLocal()
+
+    try:
+        person = db.query(Person).filter(
+            Person.id == person_id
+        ).first()
+        if person is None :
+            raise HTTPException(
+                status_code=404,
+                detail="Person not fousd"
+            )
+
+        if end_time <= start_time:
+            raise HTTPException(
+                status_code= 400,
+                detail="End time must be after start time"
+            )
+
+        entry = Time(
+
+            person_id = person_id,
+            entry_date = entry_date,
+            start_time = start_time,
+            end_time = end_time
+
+        )
+
+        db.add(entry)
+        db.commit()
+        db.refresh(entry)
+
+        return{
+
+            "id": entry.id,
+            "person_id": entry.person_id,
+            "entry_date": entry.entry_date,
+            "start_time": entry.start_time,
+            "end_time": entry.end_time
+        }
+
+    finally:
+        db.close()
+
+
+@app.get("/times")
+def get_times():
+    db = SessionLocal()
+
+    try:
+        entries = db.query(Time).order_by(Time.id.desc()).all()
+
+        return [
+            {
+                "id": entry.id,
+                "person_id": entry.person_id,
+                "entry_date": entry.entry_date,
+                "start_time": entry.start_time,
+                "end_time": entry.end_time,
+            }
+            for entry in entries
+        ]
+
     finally:
         db.close()
