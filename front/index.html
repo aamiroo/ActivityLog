@@ -18,6 +18,7 @@
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:34px}.stat{padding:19px 20px;border:1px solid var(--line);border-radius:19px;background:var(--panel);backdrop-filter:blur(20px);box-shadow:var(--shadow);animation:rise .6s both}.stat:nth-child(2){animation-delay:.08s}.stat:nth-child(3){animation-delay:.16s}.stat-head{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:11px}.stat-icon{width:33px;height:33px;display:grid;place-items:center;border-radius:11px;background:color-mix(in srgb,var(--accent) 13%,transparent);color:var(--accent);font-size:16px}.stat strong{display:block;font-size:27px;letter-spacing:-.7px;margin-top:12px;font-weight:800}.stat small{color:var(--muted);font-size:10px}
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:17px}.section-head h3{margin:0;font-size:19px;letter-spacing:-.5px}.section-head p{color:var(--muted);font-size:11px;margin:5px 0 0}.section-actions{display:flex;gap:9px;align-items:center}.search{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;min-height:42px;padding:0 13px;font:inherit;font-size:12px;width:210px;outline:none}.search:focus,input:focus{border-color:var(--accent)}.people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.person-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:21px;background:var(--panel);backdrop-filter:blur(22px);padding:19px;box-shadow:var(--shadow);animation:rise .45s both;transition:transform .25s,border-color .25s,background .25s}.person-card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}.person-card.active{border-color:color-mix(in srgb,var(--accent2) 55%,var(--line));background:linear-gradient(145deg,color-mix(in srgb,var(--accent2) 8%,var(--panel)),var(--panel))}.person-card.active:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:var(--accent2);filter:blur(75px);opacity:.12;top:-65px;left:-40px;pointer-events:none}.person-top{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative}.person-identity{display:flex;align-items:center;gap:11px;min-width:0}.avatar{width:44px;height:44px;flex-shrink:0;border-radius:15px;display:grid;place-items:center;font-weight:800;font-size:16px;color:white;background:linear-gradient(145deg,#7565ed,#36b9b4);box-shadow:0 6px 18px rgba(104,101,235,.22)}.person-name{font-size:14px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.person-meta{font-size:10px;color:var(--muted);margin-top:3px}.status{font-size:10px;display:inline-flex;align-items:center;gap:6px;padding:6px 8px;border-radius:99px;color:var(--muted);background:var(--panel2);border:1px solid var(--line);white-space:nowrap}.status.live{color:var(--accent2);border-color:color-mix(in srgb,var(--accent2) 28%,transparent)}.status.live .dot{animation:pulse 1.7s infinite}.timer{font-variant-numeric:tabular-nums;font-size:31px;font-weight:700;letter-spacing:1px;margin:24px 0 3px;direction:ltr;text-align:right}.timer-caption{font-size:10px;color:var(--muted);margin-bottom:19px}.card-bottom{display:flex;gap:9px}.track-btn{flex:1;min-height:44px;border:0;border-radius:13px;color:#fff;background:linear-gradient(115deg,#7566f2,#5e89fa);font:inherit;font-size:12px;font-weight:700;cursor:pointer;transition:filter .2s,transform .2s;box-shadow:0 7px 18px rgba(103,98,238,.2)}.track-btn:hover{filter:brightness(1.12);transform:translateY(-1px)}.track-btn.stop{background:linear-gradient(115deg,#0fae9c,#37cbb2);color:#062d2b;box-shadow:0 7px 18px rgba(25,190,164,.15)}.mini-btn{width:44px;flex-shrink:0;border:1px solid var(--line);border-radius:13px;background:var(--panel2);color:var(--muted);cursor:pointer;font-size:16px}.empty{grid-column:1/-1;text-align:center;border:1px dashed var(--line);border-radius:22px;padding:55px 20px;color:var(--muted);background:var(--panel)}.empty-icon{font-size:35px;margin-bottom:10px}.empty strong{display:block;color:var(--text);margin-bottom:5px}.bottom-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:30px}.panel{border:1px solid var(--line);border-radius:21px;background:var(--panel);backdrop-filter:blur(20px);padding:20px;box-shadow:var(--shadow);min-width:0}.panel h3{margin:0;font-size:14px}.panel-sub{font-size:10px;color:var(--muted);margin-top:5px}.history{margin-top:17px;display:grid;gap:10px}.history-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);background:var(--panel2);border-radius:14px}.history-left{display:flex;align-items:center;gap:10px;min-width:0}.history-left .avatar{width:34px;height:34px;border-radius:11px;font-size:12px}.history-name{font-size:11px;font-weight:700}.history-date{font-size:10px;color:var(--muted);margin-top:3px}.history-time{font-size:11px;text-align:left;white-space:nowrap;direction:ltr;font-variant-numeric:tabular-nums}.history-time strong{display:block;font-size:12px}.history-time small{color:var(--muted);font-size:9px}.activity-line{display:flex;gap:12px;align-items:flex-start;margin-top:18px}.activity-line .line-icon{width:33px;height:33px;display:grid;place-items:center;border:1px solid var(--line);background:var(--panel2);border-radius:11px;flex-shrink:0}.activity-line strong{font-size:11px;display:block}.activity-line p{font-size:10px;line-height:1.9;color:var(--muted);margin:4px 0 0}.footer{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:10px;margin-top:32px;padding-top:18px;border-top:1px solid var(--line)}.footer span{display:flex;align-items:center;gap:7px}.connection-dot{width:7px;height:7px;border-radius:50%;background:#f2b84b}.connection-dot.ok{background:var(--accent2);box-shadow:0 0 10px var(--accent2)}
     .modal-backdrop{position:fixed;inset:0;z-index:20;background:rgba(3,5,12,.55);backdrop-filter:blur(9px);display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex;animation:rise .2s both}.modal{width:min(440px,100%);border:1px solid var(--line);border-radius:24px;padding:25px;background:var(--panel2);box-shadow:0 30px 100px rgba(0,0,0,.3)}.modal h3{margin:0 0 6px;font-size:19px}.modal p{margin:0 0 22px;color:var(--muted);font-size:11px;line-height:1.9}.field-label{font-size:11px;display:block;margin-bottom:8px}.field{width:100%;border:1px solid var(--line);border-radius:13px;background:var(--bg);color:var(--text);padding:13px;font:inherit;font-size:13px;outline:none}.modal-actions{display:flex;gap:10px;margin-top:18px}.modal-actions>*{flex:1}.toast-wrap{position:fixed;bottom:22px;left:22px;z-index:40;display:grid;gap:8px}.toast{max-width:min(390px,calc(100vw - 44px));padding:13px 16px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);box-shadow:var(--shadow);backdrop-filter:blur(20px);font-size:12px;animation:rise .25s both}.toast.error{border-color:color-mix(in srgb,var(--danger) 45%,var(--line))}.toast.success{border-color:color-mix(in srgb,var(--accent2) 45%,var(--line))}.skeleton{height:205px;border-radius:21px;background:linear-gradient(100deg,var(--panel),var(--panel2),var(--panel));background-size:200% 100%;animation:shimmer 1.4s infinite}@keyframes shimmer{to{background-position:-200% 0}}
+    .manage-actions{display:flex;gap:7px;margin-top:9px}.manage-btn{flex:1;min-height:34px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--muted);font:inherit;font-size:10px;cursor:pointer}.manage-btn:hover{border-color:var(--accent);color:var(--text)}.manage-btn.danger{color:var(--danger)}.history-row{flex-wrap:wrap}.history-actions{display:flex;gap:6px;align-items:center}.history-actions .manage-btn{padding:0 9px;min-height:30px;flex:initial}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field-group{min-width:0}.field-group.full{grid-column:1/-1}.field-group .field{min-width:0}.modal{max-height:90vh;overflow:auto}.modal-actions button{min-width:0} 
     @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-visual{min-height:190px}.people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bottom-grid{grid-template-columns:1fr}.hero h2{font-size:38px}}
     @media(max-width:580px){.shell{padding:18px 14px 38px}.topbar{margin-bottom:28px}.brand p{display:none}.top-actions .btn span{display:none}.top-actions .btn{width:43px;padding:0}.hero h2{font-size:32px;letter-spacing:-1px}.hero-visual{min-height:175px}.orb{width:110px;height:110px}.stats{gap:8px}.stat{padding:13px 12px;border-radius:15px}.stat strong{font-size:22px}.stat-head{font-size:9px}.stat-icon{width:29px;height:29px}.section-head{align-items:flex-start;flex-direction:column}.section-actions{width:100%}.search{flex:1;width:0}.people-grid{grid-template-columns:1fr}.person-card{padding:17px}.bottom-grid{margin-top:22px}.footer{flex-direction:column}.history-row{align-items:flex-start}.history-time{font-size:10px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
@@ -36,7 +37,7 @@
     <section class="bottom-grid"><article class="panel"><div class="section-head"><div><h3>آخرین ثبت‌ها</h3><p>جدیدترین بازه‌های ذخیره‌شده در دیتابیس</p></div><span class="status" id="historyStatus">در حال دریافت</span></div><div class="history" id="historyList"><div class="panel-sub">در حال بارگذاری سوابق…</div></div></article><article class="panel"><h3>یک تجربه‌ی ساده و هوشمند</h3><p class="panel-sub">جزئیات کوچک برای اینکه تمرکز روی کار بماند.</p><div class="activity-line"><span class="line-icon">◉</span><div><strong>شروع با یک کلیک</strong><p>با زدن «شروع فعالیت»، زمان فعلی روی همین دستگاه ذخیره می‌شود.</p></div></div><div class="activity-line"><span class="line-icon">◷</span><div><strong>پایان با یک کلیک</strong><p>با زدن «پایان فعالیت»، بازه‌ی کامل به API ارسال و در دیتابیس ثبت می‌شود.</p></div></div><div class="activity-line"><span class="line-icon">⌁</span><div><strong>ادامه بعد از رفرش</strong><p>تایمر فعال در همین مرورگر نگه داشته می‌شود؛ پایان آن باید از همین مرورگر انجام شود.</p></div></div></article></section>
     <footer class="footer"><span><i class="connection-dot" id="connectionDot"></i><span id="connectionText">در حال بررسی اتصال به API</span></span><span>ActivityLog <b>·</b> زمان، شفاف و ساده</span></footer>
   </main>
-  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><form class="modal" id="personForm"><h3 id="modalTitle">افزودن شخص جدید</h3><p>نام فرد را وارد کن تا فضای ثبت زمان برای او ساخته شود.</p><label class="field-label" for="personName">نام و نام خانوادگی</label><input class="field" id="personName" name="name" maxlength="100" required placeholder="مثلاً علی رضایی" autocomplete="name"/><div class="modal-actions"><button class="btn primary" type="submit" id="savePersonBtn">ثبت شخص</button><button class="btn" type="button" id="cancelModal">انصراف</button></div></form></div>
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><form class="modal" id="personForm"><h3 id="modalTitle">افزودن شخص جدید</h3><p id="modalDescription">نام فرد را وارد کن تا فضای ثبت زمان برای او ساخته شود.</p><div id="modalFields"></div><div class="modal-actions"><button class="btn primary" type="submit" id="savePersonBtn">ثبت شخص</button><button class="btn" type="button" id="cancelModal">انصراف</button></div></form></div>
   <div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
 <script>
 (() => {
@@ -97,14 +98,14 @@
       $('#peopleGrid').innerHTML = filtered.map((p,i)=>{
         const active=state.active[p.id]; const live=!!active; const since=active?new Date(active.startedAt):null;
         const startLabel=since?`${pad(since.getHours())}:${pad(since.getMinutes())}`:'آماده‌ی شروع';
-        return `<article class="person-card ${live?'active':''}" style="animation-delay:${Math.min(i*45,250)}ms"><div class="person-top"><div class="person-identity"><div class="avatar">${esc(initials(p.name))}</div><div style="min-width:0"><div class="person-name">${esc(p.name)}</div><div class="person-meta">شناسه ${esc(p.id)} · ${live?'شروع '+startLabel:'ثبت زمان فعالیت'}</div></div></div><span class="status ${live?'live':''}"><i class="dot"></i>${live?'در حال ثبت':'آماده'}</span></div><div class="timer" data-timer="${esc(p.id)}">${live?formatDuration(durationSeconds(active.startedAt)):'00:00:00'}</div><div class="timer-caption">${live?'زمان سپری‌شده از شروع فعالیت':'با کلیک، زمان همین لحظه ثبت می‌شود'}</div><div class="card-bottom"><button class="track-btn ${live?'stop':''}" data-track="${esc(p.id)}">${live?'■ پایان فعالیت':'▶ شروع فعالیت'}</button><button class="mini-btn" data-person-history="${esc(p.id)}" title="نمایش سوابق این شخص" aria-label="نمایش سوابق">⌁</button></div></article>`;
+        return `<article class="person-card ${live?'active':''}" style="animation-delay:${Math.min(i*45,250)}ms"><div class="person-top"><div class="person-identity"><div class="avatar">${esc(initials(p.name))}</div><div style="min-width:0"><div class="person-name">${esc(p.name)}</div><div class="person-meta">شناسه ${esc(p.id)} · ${live?'شروع '+startLabel:'ثبت زمان فعالیت'}</div></div></div><span class="status ${live?'live':''}"><i class="dot"></i>${live?'در حال ثبت':'آماده'}</span></div><div class="timer" data-timer="${esc(p.id)}">${live?formatDuration(durationSeconds(active.startedAt)):'00:00:00'}</div><div class="timer-caption">${live?'زمان سپری‌شده از شروع فعالیت':'با کلیک، زمان همین لحظه ثبت می‌شود'}</div><div class="card-bottom"><button class="track-btn ${live?'stop':''}" data-track="${esc(p.id)}">${live?'■ پایان فعالیت':'▶ شروع فعالیت'}</button><button class="mini-btn" data-person-history="${esc(p.id)}" title="نمایش تعداد سوابق این شخص" aria-label="نمایش سوابق">⌁</button></div><div class="manage-actions"><button class="manage-btn" data-edit-person="${esc(p.id)}">✎ ویرایش شخص</button><button class="manage-btn danger" data-delete-person="${esc(p.id)}">× حذف شخص</button></div></article>`;
       }).join('');
     }
     const sorted=[...state.times].sort((a,b)=>Number(b.id)-Number(a.id)).slice(0,5);
     if(!sorted.length) $('#historyList').innerHTML='<div class="empty" style="padding:25px 12px"><strong>هنوز رکوردی ثبت نشده</strong><div>بعد از پایان اولین تایمر، سابقه اینجا نمایش داده می‌شود.</div></div>';
     else $('#historyList').innerHTML=sorted.map(t=>{
       const date=String(t.entry_date).slice(0,10); const st=String(t.start_time).slice(0,5), en=String(t.end_time).slice(0,5); const mins=Math.max(0,Math.round((parseDateTime(date,en)-parseDateTime(date,st))/60000));
-      return `<div class="history-row"><div class="history-left"><div class="avatar">${esc(initials(personName(t.person_id)))}</div><div style="min-width:0"><div class="history-name">${esc(personName(t.person_id))}</div><div class="history-date">${esc(date)} · ${esc(st)} تا ${esc(en)}</div></div></div><div class="history-time"><strong>${Math.floor(mins/60)?`${pad(Math.floor(mins/60))}:`:''}${pad(mins%60)} دقیقه</strong><small>رکورد #${esc(t.id)}</small></div></div>`;
+      return `<div class="history-row"><div class="history-left"><div class="avatar">${esc(initials(personName(t.person_id)))}</div><div style="min-width:0"><div class="history-name">${esc(personName(t.person_id))}</div><div class="history-date">${esc(date)} · ${esc(st)} تا ${esc(en)}</div></div></div><div class="history-time"><strong>${Math.floor(mins/60)?`${pad(Math.floor(mins/60))}:`:''}${pad(mins%60)} دقیقه</strong><small>رکورد #${esc(t.id)}</small></div><div class="history-actions"><button class="manage-btn" data-edit-time="${esc(t.id)}">✎ ویرایش</button><button class="manage-btn danger" data-delete-time="${esc(t.id)}">× حذف</button></div></div>`;
     }).join('');
   }
   async function startTimer(id) {
@@ -123,20 +124,97 @@
       delete state.active[id]; persistActive(); await loadAll(); toast(`بازه‌ی فعالیت ${personName(id)} با موفقیت ذخیره شد.`);
     } catch(err) { toast(`ذخیره انجام نشد: ${err.message}`,'error'); if(button){button.disabled=false;button.textContent='■ پایان فعالیت';} }
   }
-  function openModal(){ $('#modalBackdrop').classList.add('show'); setTimeout(()=>$('#personName').focus(),80); }
-  function closeModal(){ $('#modalBackdrop').classList.remove('show'); $('#personForm').reset(); }
+  let modalMode = 'add-person';
+  let editingPersonId = null;
+  let editingTimeId = null;
+  function setModal(title, description, fields, submitLabel) {
+    $('#modalTitle').textContent = title;
+    $('#modalDescription').textContent = description;
+    $('#modalFields').innerHTML = fields;
+    $('#savePersonBtn').textContent = submitLabel;
+    $('#savePersonBtn').disabled = false;
+    $('#modalBackdrop').classList.add('show');
+    setTimeout(() => $('#modalFields input, #modalFields select')?.focus(), 80);
+  }
+  function openModal(){
+    modalMode = 'add-person'; editingPersonId = null; editingTimeId = null;
+    setModal('افزودن شخص جدید','نام فرد را وارد کن تا فضای ثبت زمان برای او ساخته شود.',
+      '<label class="field-label" for="personName">نام و نام خانوادگی</label><input class="field" id="personName" name="name" maxlength="100" required placeholder="مثلاً علی رضایی" autocomplete="name"/>','ثبت شخص');
+  }
+  function openPersonEditModal(id){
+    const person = state.people.find(p => Number(p.id) === Number(id)); if (!person) return;
+    modalMode = 'edit-person'; editingPersonId = Number(id); editingTimeId = null;
+    setModal('ویرایش شخص','نام جدید را وارد کن. تغییرات مستقیماً در دیتابیس ذخیره می‌شوند.',
+      `<label class="field-label" for="personName">نام و نام خانوادگی</label><input class="field" id="personName" name="name" maxlength="100" required value="${esc(person.name)}" autocomplete="name"/>`,'ذخیره تغییرات');
+  }
+  function openTimeEditModal(id){
+    const entry = state.times.find(t => Number(t.id) === Number(id)); if (!entry) return;
+    modalMode = 'edit-time'; editingTimeId = Number(id); editingPersonId = null;
+    const options = state.people.map(p => `<option value="${esc(p.id)}" ${Number(p.id)===Number(entry.person_id)?'selected':''}>${esc(p.name)}</option>`).join('');
+    const date = String(entry.entry_date).slice(0,10);
+    const start = String(entry.start_time).slice(0,5);
+    const end = String(entry.end_time).slice(0,5);
+    setModal(`ویرایش رکورد #${id}`,'شخص، تاریخ و ساعت شروع و پایان را اصلاح کن.',
+      `<div class="field-grid"><div class="field-group full"><label class="field-label" for="editTimePerson">شخص</label><select class="field" id="editTimePerson" required>${options}</select></div><div class="field-group full"><label class="field-label" for="editTimeDate">تاریخ</label><input class="field" id="editTimeDate" type="date" required value="${esc(date)}"/></div><div class="field-group"><label class="field-label" for="editStartTime">ساعت شروع</label><input class="field" id="editStartTime" type="time" step="1" required value="${esc(start)}"/></div><div class="field-group"><label class="field-label" for="editEndTime">ساعت پایان</label><input class="field" id="editEndTime" type="time" step="1" required value="${esc(end)}"/></div></div>`,'ذخیره تغییرات');
+  }
+  function closeModal(){ $('#modalBackdrop').classList.remove('show'); $('#personForm').reset(); $('#modalFields').innerHTML=''; }
   $('#addPersonBtn').addEventListener('click',openModal); $('#addPersonTop').addEventListener('click',openModal); $('#cancelModal').addEventListener('click',closeModal);
   $('#modalBackdrop').addEventListener('click',e=>{if(e.target===$('#modalBackdrop'))closeModal();});
   $('#personForm').addEventListener('submit',async e=>{
-    e.preventDefault(); const name=$('#personName').value.trim(); if(!name)return;
-    const btn=$('#savePersonBtn'); btn.disabled=true; btn.textContent='در حال ثبت…';
-    try { const data=await request(`/people?name=${encodeURIComponent(name)}`,{method:'POST'}); closeModal(); await loadAll(); toast(`شخص «${data.name||name}» اضافه شد.`); }
-    catch(err){toast(`ثبت شخص ناموفق بود: ${err.message}`,'error');}
-    finally{btn.disabled=false;btn.textContent='ثبت شخص';}
+    e.preventDefault();
+    const btn=$('#savePersonBtn'); btn.disabled=true; btn.textContent='در حال ذخیره…';
+    try {
+      if (modalMode === 'add-person' || modalMode === 'edit-person') {
+        const name=$('#personName')?.value.trim(); if(!name) return;
+        const params = new URLSearchParams({name});
+        if (modalMode === 'add-person') {
+          const data=await request(`/people?${params.toString()}`,{method:'POST'});
+          closeModal(); await loadAll(); toast(`شخص «${data.name||name}» اضافه شد.`);
+        } else {
+          const data=await request(`/people/${editingPersonId}?${params.toString()}`,{method:'PUT'});
+          closeModal(); await loadAll(); toast(`نام شخص به «${data.name||name}» تغییر کرد.`);
+        }
+      } else if (modalMode === 'edit-time') {
+        const params = new URLSearchParams({
+          person_id: $('#editTimePerson').value,
+          entry_date: $('#editTimeDate').value,
+          start_time: $('#editStartTime').value,
+          end_time: $('#editEndTime').value
+        });
+        await request(`/times/${editingTimeId}?${params.toString()}`,{method:'PUT'});
+        closeModal(); await loadAll(); toast(`رکورد #${editingTimeId} ویرایش شد.`);
+      }
+    } catch(err) { toast(`عملیات ناموفق بود: ${err.message}`,'error'); }
+    finally { btn.disabled=false; btn.textContent=modalMode==='add-person'?'ثبت شخص':'ذخیره تغییرات'; }
   });
-  $('#peopleGrid').addEventListener('click',e=>{
-    const track=e.target.closest('[data-track]'); if(track){const id=track.dataset.track; state.active[id]?stopTimer(id):startTimer(id);return;}
-    const history=e.target.closest('[data-person-history]'); if(history){const id=history.dataset.personHistory;const rows=state.times.filter(t=>Number(t.person_id)===Number(id)).sort((a,b)=>Number(b.id)-Number(a.id));toast(rows.length?`${personName(id)} · ${rows.length} رکورد ثبت‌شده`:`برای ${personName(id)} هنوز رکوردی ثبت نشده.`,'success');}
+  $('#peopleGrid').addEventListener('click',async e=>{
+    const track=e.target.closest('[data-track]');
+    if(track){const id=track.dataset.track; state.active[id]?stopTimer(id):startTimer(id);return;}
+    const history=e.target.closest('[data-person-history]');
+    if(history){const id=history.dataset.personHistory;const rows=state.times.filter(t=>Number(t.person_id)===Number(id)).sort((a,b)=>Number(b.id)-Number(a.id));toast(rows.length?`${personName(id)} · ${rows.length} رکورد ثبت‌شده`:`برای ${personName(id)} هنوز رکوردی ثبت نشده.`,'success');return;}
+    const edit=e.target.closest('[data-edit-person]');
+    if(edit){openPersonEditModal(edit.dataset.editPerson);return;}
+    const del=e.target.closest('[data-delete-person]');
+    if(del){
+      const id=Number(del.dataset.deletePerson);
+      if(state.active[id]){toast('قبل از حذف شخص، تایمر فعال او را متوقف کن.','error');return;}
+      if(!confirm(` «${personName(id)}» با حذف این شخص، تمام رکوردهای زمانی مرتبط با او نیز برای همیشه حذف خواهند شد. این عملیات قابل بازگشت نیست.`))return;
+      del.disabled=true;
+      try{await request(`/people/${id}`,{method:'DELETE'});await loadAll();toast('شخص حذف شد.');}
+      catch(err){toast(`حذف شخص انجام نشد: ${err.message}`,'error');del.disabled=false;}
+    }
+  });
+  $('#historyList').addEventListener('click',async e=>{
+    const edit=e.target.closest('[data-edit-time]');
+    if(edit){openTimeEditModal(edit.dataset.editTime);return;}
+    const del=e.target.closest('[data-delete-time]');
+    if(del){
+      const id=Number(del.dataset.deleteTime);
+      if(!confirm(`رکورد زمانی شماره ${id} برای همیشه حذف شود؟`))return;
+      del.disabled=true;
+      try{await request(`/times/${id}`,{method:'DELETE'});await loadAll();toast(`رکورد #${id} حذف شد.`);}
+      catch(err){toast(`حذف رکورد انجام نشد: ${err.message}`,'error');del.disabled=false;}
+    }
   });
   $('#searchInput').addEventListener('input',render); $('#refreshBtn').addEventListener('click',loadAll);
   $('#themeToggle').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem(THEME_KEY,next);$('#themeToggle').textContent=next==='dark'?'☼':'☾';});

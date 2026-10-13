@@ -157,6 +157,149 @@ def get_times():
 
 
 
+@app.put("/people/{person_id}")
+def editـpersone (person_id: int, name: str):
+    db = SessionLocal()
+
+    try:
+        person = db.query(Person).filter(
+            Person.id == person_id
+        ).first()
+
+        if person is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Person not found"
+            )
+        name = name.strip()
+        if not name:
+            raise HTTPException(
+                status_code=404,
+                detail="Name cannot be empty"
+            )
+        
+        person.name = name
+        db.commit()
+        db.refresh(person)
+
+        return {
+            "id": person.id,
+            "name": person.name
+        }
+    finally:
+        db.close()
+
+@app.delete("/people/{person_id}")
+def delete_person (person_id: int):
+    db = SessionLocal()
+
+    try:
+        person = db.query(Person).filter(
+            Person.id == person_id
+        ).first()
+
+        if person is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Person not found"
+            )
+
+        db.query(Time).filter(
+            Time.person_id == person_id
+        ).delete(synchronize_session=False)
+
+        db.delete(person)
+        db.commit()
+
+        return {
+            "message": "Person related time entries deleted successfully",
+            "id": person_id
+        }
+
+    finally:
+        db.close()
+
+
+@app.put("/time/{time_id}")
+def edit_time(
+    person_id: int,
+    time_id: int,
+    entry_date: date,
+    start_time: time,
+    end_time: time,):
+    db = SessionLocal()
+
+    try:
+        entry = db.query(Time).filter(
+            Time.id == time_id
+        ).first()
+
+        if entry is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Time entry not found"
+            )
+
+        person = db.query(Person).filter(
+            Person.id == person_id
+        ).first()
+
+        if person is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Person not found"
+            )
+
+        if end_time <= start_time:
+            raise HTTPException(
+                status_code=400,
+                detail="End time must be after start time"
+            )
+
+        entry.person_id = person_id
+        entry.entry_date = entry_date
+        entry.start_time = start_time
+        entry.end_time = end_time
+
+        db.commit()
+        db.refresh(entry)
+
+        return {
+            "id": entry.id,
+            "person_id": entry.person_id,
+            "entry_date": entry.entry_date,
+            "start_time": entry.start_time,
+            "end_time": entry.end_time
+        }
+
+    finally:
+        db.close()
+
+@app.delete("/time/{time_id}")
+def edit_time(
+    time_id: int,):
+    db = SessionLocal()
+
+    
+    try:
+        entry = db.query(Time).filter(
+            Time.id == time_id
+        ).first()
+
+        if entry is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Time entry not found"
+            )
+        db.commit(entry)
+        db.refresh()
+        return{
+            "message": "The time entry deleted successfully",
+            "id" : time.id
+        }
+    finally:
+        db.close()
+
 app.mount(
     "/ui",
     StaticFiles(
