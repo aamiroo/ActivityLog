@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi import HTTPException
 from fastapi import Depends
+from fastapi.staticfiles import StaticFiles
 
 from contextlib import asynccontextmanager
 
@@ -12,6 +13,9 @@ from app import models
 from app.models import Person , Time
 
 from datetime import date , time
+
+from pathlib import Path
+
 
 @asynccontextmanager
 async def lifespan (app:FastAPI):
@@ -150,3 +154,14 @@ def get_times():
 
     finally:
         db.close()
+
+
+
+app.mount(
+    "/ui",
+    StaticFiles(
+        directory=Path(__file__).resolve().parent.parent / "front",
+        html=True,
+    ),
+    name="ui",
+)
